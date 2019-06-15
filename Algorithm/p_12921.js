@@ -1,5 +1,5 @@
 // https://programmers.co.kr/learn/courses/30/lessons/12921
-// unsolved
+// unsolved yet
 function solution(n) {
   var answer = 0;
   for (let i=2; i<=n; i++) {
