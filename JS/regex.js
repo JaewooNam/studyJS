@@ -39,6 +39,31 @@ const metaPattern2 = /.at/gi
 const metaPattern3 = /\.at/gi
 
 
+// exec method
+// 일치하는 부분을찾을 수 없을때는 null 을 반환
+// 테스트할 문자열을 매개변수로 받음
 
+//  exec() method returns arrays, which are index (matched position) and input (parameters)
+//  반환하는  첫번쨰 어레이에는 패턴에 일치하는 부분 전체이다, 다른 데이터는 표현식에서 캡처한 부분.
+
+// 패턴에 캡처 그룹이 없다면 반환하는 배열에는 데이터가 단 하나만 존재
+
+// test method
+// 문자열 패턴이 일치하면 true, 아니면 false를 반환, 패턴에 일치하는지만 확인할때 사용
+
+
+// RegExp
+const text = 'This has been a short summer'
+const pattern = /(.)hort/g
+
+if (pattern.test(text)) {
+  console.log(RegExp.input)
+  console.log(RegExp.leftContext)
+  console.log(RegExp.rightContext)
+  console.log(RegExp.lastMatch)
+  console.log(RegExp.lastParen)
+  console.log(RegExp.multiline)
+
+}
 
 
