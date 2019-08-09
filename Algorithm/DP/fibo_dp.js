@@ -12,3 +12,5 @@ function fibo(n) {
     return memo[n]
   }
 }
+
+console.log(fibo(10))

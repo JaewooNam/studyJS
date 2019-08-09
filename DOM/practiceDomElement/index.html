@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <div id="wrap">
+      <div class="c-1">
+          Hello
+          <div class="c-1-1">Welcome</div>
+          <div class="c-1-2">to my</div>
+      </div>
+      <div class="c-2">
+          Home.
+          <div class="c-2-1">
+              I
+              <div class="c-2-1-1">am</div>
+          </div>
+      </div>
+      <div class="c-3">
+          Happy
+          <div class="c-3-1">Today.</div>
+      </div>
+      <div class="c-4">
+          Thanks
+          <div class="c-4-1">Guys!</div>
+      </div>
+  </div>
+<body>
+    <script type="text/javascript">
+      function flattenRecursive(parent, result) {
+        const childNodes = parent.childNodes;
+        for (let i=0; i<childNodes.length; ++i) {
+          const child = childNodes[i];
+          if (child.nodeType === Node.TEXT_NODE) {
+            const textValue = child.nodeValue.trim();
+            if (textValue.length > 0) {
+              result[parent.className] = textValue;
+            }
+          } else if (child.nodeType === Node.ELEMENT_NODE) {
+            flattenRecursive(child, result);
+          }
+        }
+      }
+
+      function findText(className_1, className_2) {
+        let result = {}
+        const root = document.getElementById("wrap");
+        flattenRecursive(root, result);
+        
+        return result[className_1] + result[className_2];
+      }
+
+      const result = findText("c-2", "c-3-1");
+    </script>
+</body>
+</html>
