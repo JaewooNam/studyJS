@@ -1,5 +1,5 @@
 // Dynamic Programming
-// Fibonachi 
+// Find nth Fibonachi
 function fibo(n) {
   let memo = []
   if (n <= 1) {
@@ -13,4 +13,4 @@ function fibo(n) {
   }
 }
 
-console.log(fibo(10))
+console.log(fibo(3))
