@@ -24,4 +24,20 @@ const newArr2 = [...arr.slice(0,2), ...arr3.slice(3)]
 const arr4 = [1,2,3,4,5]
 arr4.splice(2,1) // from 2nd index, remove one value
 
+// join
+
+
+// split
+
+
+// slice
+
+
+// reduce
+
+
+
+
+
+
 
