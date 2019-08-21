@@ -9,3 +9,4 @@ function sayColor() {
 
 const objectSayColor = sayColor.bind(o)
 objectSayColor() // blue
+//
